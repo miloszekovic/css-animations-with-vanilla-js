@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animation with Vanilla JS</title>
+
+    <style>
+        /* Global */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100vh;
+        }
+
+        body {
+            background: #ddd;
+            
+            display: flex;
+            position: relative;
+        }
+
+        section {
+            margin: auto;
+        }
+
+        /* Yin Yang */
+        .yin-yang {
+            width: 400px; 
+            height: 200px;
+            background: #fff;
+            border-color: #000;
+            border-style: solid;
+            border-width: 0 0 200px 0;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            position: relative;
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        .yin-yang:before,
+        .yin-yang:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            width: 56px;
+            height: 56px;
+        }
+        .yin-yang:before {
+            left: 0;
+            background: #fff;
+            border: 72px solid #000;
+        }
+        .yin-yang:after {
+            left: 50%;
+            background: #000;
+            border: 72px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+
+        <!-- Yin Yang -->
+        <div class="yin-yang"></div>
+
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
